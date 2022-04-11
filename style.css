@@ -1,0 +1,232 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+html {
+  background-color: rgb(235, 234, 234);
+}
+p,
+ul {
+  font-size: 20px;
+}
+/* Řeší header */
+.color-strip {
+  background-color: #a17b3a;
+  display: flex;
+  height: 10vh;
+  margin-top: 2vh;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.color-strip button {
+  height: 70%;
+  border: none;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+header p {
+  font-family: 'Send Flowers', bold;
+  font-size: 2em;
+  position: relative;
+  background-color: #365521;
+  width: max-content;
+  padding: 0.45% 0.45%;
+
+  left: 10vw;
+  top: -1.1vh;
+}
+
+header button {
+  background-color: #1f5cce;
+
+  text-align: center;
+  font-size: 2em;
+  padding: 0 0.75vw;
+  margin: 1vh 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* Řeší posty */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.namePhoto {
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: left;
+  width: 100%;
+}
+
+.namePhoto > * {
+  background-color: rgb(153, 135, 135);
+}
+.namePhoto img {
+  clip-path: circle();
+  /* border-radius: 50%;
+  border: 10px solid black; */
+  width: 20vh;
+  max-width: 200px;
+  pointer-events: none;
+}
+
+.nameContainer {
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  margin: 2%;
+  padding: 1%;
+}
+.post-background {
+  border-radius: 10px;
+  background-color: rgb(209, 209, 209);
+  margin: 1.5vh 0.7vw;
+  padding: 0.7vw;
+}
+
+.bio {
+  background-color: #658a4c;
+  list-style-position: inside;
+  padding: 3% 2%;
+  margin-top: 3%;
+  position: relative;
+  border-radius: 20px;
+}
+
+.pop {
+  background-color: #879c1b;
+  width: fit-content;
+  padding: 1% 3%;
+  border-radius: 20px;
+  position: absolute;
+  top: -3.9vh;
+  left: -1px;
+}
+
+.friendList{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 2%;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.friend{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  vertical-align: baseline;
+  background-color: #879c1b;
+  border-radius: 15px;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  padding: 0.5vw;
+}
+
+.friend img{
+  display: flex;
+  border-radius: 20px;
+  width: 20vh;
+  max-width: 100px;
+  pointer-events: none;
+  
+}
+.postList{
+  flex-direction: column;
+}
+.post{
+  background-color: #516e3e;
+  padding: 2%;
+  margin: 2% 0.1%;
+  border-radius: 10px;
+}
+
+.post__title{
+  display: block;
+  padding: 7px;
+  margin-bottom: 6px;
+  background-color: #879c1b;
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+.post img{
+  max-width: 15vw;
+}
+footer{
+  color: black;
+  text-align: right;
+  padding: 0 2%;
+}
+
+.postList img{
+  object-fit: contain;
+  width: auto;
+ max-height: 50vh;
+}
+/* DIALOG & Overlay */
+.overlay{
+  top:0;
+  left:0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(38, 38, 158, 0.623);
+}
+.hidden{
+  display: none;
+}
+/* .dialog{
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  .namePhoto{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+  .namePhoto img{
+    width: 30%;
+  }
+  .color-strip{
+    flex-direction: column;
+    gap: 5vh;
+  }
+  header h3{
+    display: none;
+  }
+  header{
+    margin-bottom: 5vh;
+  }
+  .nameContainer > *{
+    margin: 5%;
+  }
+  .post img{
+    min-width: 45vw;
+  }
+
+}
